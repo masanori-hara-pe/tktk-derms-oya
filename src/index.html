@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Blobストレージのファイル参照</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+</head>
+<body>
+<header>
+ // <h1>サンプルサイト</h1>
+ <h1>ＴＫＴＫ小山_ＤＥＲＭＳ</h1>
+</header>
+
+<main>
+  <article>
+    <h2>Blobに保存されているCSVファイルの参照デモ</h2>
+<p><a href="https://dermsdata.z11.web.core.windows.net/data/CSVlist.html">CSVファイルのリスト</a>を開く。
+リストからサンプルのテストファイルを選択すると当該ファイルがダウンロードされます。</p>
+<h2>Blobの静的Webサイトホスティングの利用</h2>
+<p>本サイトは、Azure Blobストレージの静的Webサイトのホスティングサービスを利用しています。
+静的サイトとは、HTML、CSS、JavaScriptで構成された、事前に用意した一定数のファイルを用いてページを配信するウェブサイトで、バックエンドのサーバー側の処理やデータベースはありません。
+Blobストレージの静的Webサイトは、最も簡単に低コストで静的サイトを公開する方法ですが、機能が限定されています。
+ファイルを公開する場合にMicrosoftのIIS（Webサーバー）のようにディレクトリの内容が参照できないため、そこに保存されているファイルのリストを作る必要があります。このデモでは、このリストを何らかの方法でCSVファイル蓄積時にhtmlファイルとして生成するというストーリーになっています。
+また、カスタムドメインによるアクセスはサポートしていない、認証ができないという欠点があります。これらの欠点を解決する別のサービスが提供されています。
+静的 Web サイトのホスティングは無料で利用できます。 サイトで利用した BLOB ストレージと、運用コストに対してのみ課金されます。</p>
+<h2>静的Webサイトを生成するツール</h2>
+<p>静的サイトのコンテンツを作成するための便利なツールがあり、広く普及しています。このツールを一般的に静的サイトジェネレーターと称し、上記のデモコンテンツは<a href="https://lume.land/">Lume</a>というツールを使用して生成しました。LumeはDenoで動作する静的サイトジェネレーター(SSG)です。</p>
+<p><a href="https://lume.land/docs/overview/about-lume/">公式ドキュメント</a>によると、以下のような特徴を持っています。</p>
+<ul>
+<li>マークダウンやJavaScript、JSX、Nunjucksなど、複数フォーマットに対応</li>
+<li>各プロセッサーのフックして柔軟に拡張可能</li>
+<li>Denoベースのランタイム環境</li>
+</ul>
+
+  </article>
+</main>
+
+<footer>
+  <p>© 2024 原技術士事務所</p>
+</footer>
+
+</body></html>
